@@ -4,7 +4,7 @@ import { TbBaselineDensitySmall } from "react-icons/tb";
 
 function Navbar() {
  return (
-  <div className="border">
+  <div className="border-t-2 border-b-2 mt-10">
    <div className="flex items-center justify-between">
     <div className="flex items-center">
      <TbBaselineDensitySmall size={28} />
