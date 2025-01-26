@@ -1,41 +1,54 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { SampleNextArrow, SamplePrevArrow } from "./SliderButton";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+
+const images = [
+ { photo: "/tour.jpg", category_name: "Adventure" },
+ { photo: "/tour.jpg", category_name: "Cultural" },
+ { photo: "/tour.jpg", category_name: "Fanily Travel" },
+ { photo: "/tour.jpg", category_name: "Heritage" },
+ { photo: "/tour.jpg", category_name: "Historical" },
+ { photo: "/tour.jpg", category_name: "Inspiration" },
+ { photo: "/tour.jpg", category_name: "Wildlife" },
+];
 
 const HeroCarousel = () => {
- var settings = {
-  dots: true,
-  infinite: false,
-  speed: 500,
-  slidesToScroll: 1,
-  slidesToShow: 4,
-  nextArrow: <SampleNextArrow />,
-  prevArrow: <SamplePrevArrow />,
- };
  return (
-  <div className="slider-container">
-   <Slider {...settings}>
-    <div>
-     <h3 className="h-32 w-40 bg-gray-300">1</h3>
-    </div>
-    <div>
-     <h3>2</h3>
-    </div>
-    <div>
-     <h3>3</h3>
-    </div>
-    <div>
-     <h3>4</h3>
-    </div>
-    <div>
-     <h3>5</h3>
-    </div>
-    <div>
-     <h3>6</h3>
-    </div>
-   </Slider>
+  <div>
+   <Swiper
+    slidesPerView={1}
+    spaceBetween={20}
+    pagination={{
+     clickable: true,
+    }}
+    breakpoints={{
+     1024: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+     },
+     768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+     },
+     576: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+     },
+    }}
+    modules={[Pagination]}
+    className="mySwiper"
+   >
+    {images.map((image, indx) => (
+     <SwiperSlide key={indx}>
+      <div>
+       <img src={image.photo} alt="name" />
+      </div>
+      <p>{image.category_name}</p>
+     </SwiperSlide>
+    ))}
+   </Swiper>
   </div>
  );
 };
