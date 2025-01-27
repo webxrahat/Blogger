@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -26,7 +26,6 @@ const HeroCarousel = () => {
      delay: 2000,
      disableOnInteraction: false,
     }}
-    navigation={true}
     pagination={{
      clickable: true,
     }}
@@ -44,15 +43,15 @@ const HeroCarousel = () => {
       spaceBetween: 40,
      },
     }}
-    modules={[Navigation, Autoplay]}
+    modules={[Autoplay]}
     className="mySwiper"
    >
     {images.map((image, indx) => (
-     <SwiperSlide key={indx} className="mt-5">
+     <SwiperSlide key={indx} className="mt-10">
       <div>
        <img src={image.photo} alt="name" />
       </div>
-      <p>{image.category_name}</p>
+      <p className="text-center mt-2">{image.category_name}</p>
      </SwiperSlide>
     ))}
    </Swiper>
