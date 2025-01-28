@@ -1,0 +1,52 @@
+[
+ {
+  "category": "Technology",
+  "photo": "https://via.placeholder.com/150/technology",
+  "title": "Top 10 AI Trends in 2025"
+ },
+ {
+  "category": "Health",
+  "photo": "https://via.placeholder.com/150/health",
+  "title": "5 Daily Habits for a Healthy Life"
+ },
+ {
+  "category": "Travel",
+  "photo": "https://via.placeholder.com/150/travel",
+  "title": "Top 10 Destinations for Adventure Seekers"
+ },
+ {
+  "category": "Education",
+  "photo": "https://via.placeholder.com/150/education",
+  "title": "The Future of Online Learning"
+ },
+ {
+  "category": "Business",
+  "photo": "https://via.placeholder.com/150/business",
+  "title": "How to Start a Successful Online Store"
+ },
+ {
+  "category": "Entertainment",
+  "photo": "https://via.placeholder.com/150/entertainment",
+  "title": "Top 5 Must-Watch Movies of the Year"
+ },
+ {
+  "category": "Lifestyle",
+  "photo": "https://via.placeholder.com/150/lifestyle",
+  "title": "Minimalism: Living with Less"
+ },
+ {
+  "category": "Sports",
+  "photo": "https://via.placeholder.com/150/sports",
+  "title": "Top 10 Cricket Matches of All Time"
+ },
+ {
+  "category": "Food",
+  "photo": "https://via.placeholder.com/150/food",
+  "title": "10 Easy Recipes for Beginners"
+ },
+ {
+  "category": "Science",
+  "photo": "https://via.placeholder.com/150/science",
+  "title": "Exploring the Universe: Latest Discoveries"
+ }
+]
