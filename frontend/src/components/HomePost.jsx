@@ -16,8 +16,18 @@ const HomePost = () => {
  console.log(posts);
 
  return (
-  <div>
-   <p>{posts.length}</p>
+  <div className="grid grid-cols-2 gap-6">
+   {posts.map((post, indx) => (
+    <div key={indx}>
+     <img
+      src={post.photo}
+      alt={`${post.title}`}
+      className="w-96 rounded-t-lg"
+     />
+     <p>{post.category}</p>
+     <h2>{post.title}</h2>
+    </div>
+   ))}
   </div>
  );
 };

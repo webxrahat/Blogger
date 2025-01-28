@@ -7,8 +7,12 @@ const Home = () => {
  return (
   <div>
    <HeroCarousel />
-   <HomePost />
-   <SearchCategory />
+   <div className="grid grid-cols-3 gap-6 mt-20 ">
+    <div className="col-span-2">
+     <HomePost />
+    </div>
+    <SearchCategory />
+   </div>
   </div>
  );
 };
