@@ -2,6 +2,7 @@ import React from "react";
 import HeroCarousel from "../components/HeroCarousel";
 import SearchCategory from "../components/SearchCategory";
 import HomePost from "../components/HomePost";
+import FeaturePost from "../components/FeaturePost";
 
 const Home = () => {
  return (
@@ -11,7 +12,10 @@ const Home = () => {
     <div className="col-span-2">
      <HomePost />
     </div>
-    <SearchCategory />
+    <div>
+     <SearchCategory />
+     <FeaturePost />
+    </div>
    </div>
   </div>
  );

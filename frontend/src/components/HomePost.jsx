@@ -13,19 +13,19 @@ const HomePost = () => {
    .then((data) => setPosts(data))
    .catch((error) => console.error("Error fetching JSON:", error));
  }, []);
- console.log(posts);
+ //  console.log(posts);
 
  return (
-  <div className="grid grid-cols-2 gap-6">
+  <div className="grid grid-cols-2 gap-10">
    {posts.map((post, indx) => (
     <div key={indx}>
      <img
       src={post.photo}
       alt={`${post.title}`}
-      className="w-96 rounded-t-lg"
+      className="w-96 rounded-t-lg h-52"
      />
-     <p>{post.category}</p>
-     <h2>{post.title}</h2>
+     <button className="font-semibold mt-2 underline">#{post.category}</button>
+     <h2 className="font-semibold text-lg mt-2">{post.title}</h2>
     </div>
    ))}
   </div>
