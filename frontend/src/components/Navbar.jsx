@@ -14,9 +14,8 @@ function Navbar() {
     </div>
     <div className="flex items-center">
      <ul className="flex items-center mr-5">
-      <NavLink>Mega Menu 1</NavLink>
-      <NavLink className="px-5">Mega Menu 2</NavLink>
-      <NavLink>Mega Menu 3</NavLink>
+      <NavLink className="px-5">Add Post</NavLink>
+      <NavLink>Recent Post</NavLink>
      </ul>
      <button className="bg-blue-700 px-8 py-3 text-white">Login</button>
     </div>
