@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router";
 
 const HomePost = () => {
  const [posts, setPosts] = useState([]);
@@ -25,7 +26,9 @@ const HomePost = () => {
       className="w-96 rounded-t-lg h-52"
      />
      <button className="font-semibold mt-2 underline">#{post.category}</button>
-     <h2 className="font-semibold text-lg mt-2">{post.title}</h2>
+     <Link to={`/post/:${post.id}`}>
+      <h2 className="font-semibold text-lg mt-2">{post.title}</h2>
+     </Link>
     </div>
    ))}
   </div>
