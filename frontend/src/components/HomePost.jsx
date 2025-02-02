@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const HomePost = () => {
  const [posts, setPosts] = useState([]);
  useEffect(() => {
-  fetch("posts.json")
+  fetch("http://localhost:5000/posts")
    .then((res) => {
     if (!res.ok) {
      throw new Error("Failed to fetch data");
