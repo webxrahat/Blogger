@@ -2,6 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 const PostDetails = () => {
+ const params = useParams();
+
+ console.log(params.id);
+
+ useEffect(() => {
+  fetch(`http://localhost:5000/posts/${params.id}`)
+   .then((res) => res.json())
+   .then((data) => console.log(data));
+ }, []);
+
  return (
   <div className="my-20">
    <h1 className="text-center text-4xl font-semibold w-1/2 mx-auto leading-tight">
